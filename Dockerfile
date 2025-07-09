@@ -7,13 +7,13 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y git
 
 # Clone the repository
-RUN git clone https://github.com/Kayaba0/UnHided4K
+RUN git clone https://github.com/Kayaba0/UnHided4K.git .
 
 # Copy the local config.json file to the container
 
 # Install any needed packages specified in requirements.txt
-# RUN pip install --no-cache-dir -r requirements.txt
-RUN pip freeze > requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
 
 EXPOSE 8888
 
