@@ -12,8 +12,8 @@ RUN git clone https://github.com/Kayaba0/UnHided4K
 # Copy the local config.json file to the container
 
 # Install any needed packages specified in requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
-
+# RUN pip install --no-cache-dir -r requirements.txt
+RUN pip freeze > requirements.txt
 
 EXPOSE 8888
 
